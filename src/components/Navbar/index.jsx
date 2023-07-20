@@ -26,8 +26,8 @@ const Navbar = () => {
 				<Wrapper>
 					<Logo>Storey</Logo>
 					<Menu>
-						<Nav>Product</Nav>
-						<Nav>Hubungi Kami</Nav>
+						<Nav to="/product">Product</Nav>
+						<Nav to="/contact">Hubungi Kami</Nav>
 					</Menu>
 					<SearchBox>
 						<IconWrapper>

@@ -112,10 +112,10 @@ export const SearchBox = styled.div`
 	padding: 5px;
 	width: 250px;
 	background: none;
-	/* border: 1px solid #91a0a4; */
-	background-color: #91a0a4;
+	background-color: #dbdbdb;
 	border-radius: 16px;
 	margin-left: auto;
+	color: #000;
 
 	@media (max-width: 992px) {
 		margin: auto;
@@ -138,7 +138,7 @@ export const Search = styled.input`
 	font-size: 14px;
 	width: calc(100% - 40px);
 	background-color: transparent !important;
-	color: black;
+	color: #000;
 `;
 
 export const BurgerWrapper = styled.div`

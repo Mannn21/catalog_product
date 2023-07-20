@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import Contact from "./pages/Contact"
 import Product from "./pages/Product";
 import Details from "./pages/Details";
 import Navbar from "./components/Navbar"
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route path="/product" element={<Product />} />
 				<Route path="/product/:id" element={<Details />} />
 			</Routes>

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+
+export const ContentContainer = styled.div`
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+`
+
 export const ContentWrapper = styled.div`
     margin-top: 20px;
     padding: 0 50px;
@@ -14,15 +22,11 @@ export const ContentWrapper = styled.div`
 
 `
 
-export const ContentHeader = styled.h1`
-    margin: 0 0 40px 20px;
-
-    @media only screen and (max-width: 480px) {
-        margin: 10px;
-        text-align: center;
-        font-size: 25px;
-    }
-    @media only screen and (min-width: 481px) and (max-width: 768px){
-        margin: 30px 5px;
-    }
+export const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 `
