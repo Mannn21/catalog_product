@@ -1,11 +1,17 @@
-import CardList from "../../components/CardList"
+import CardList from "../../components/CardList";
+import PropTypes from "prop-types";
 
-const Product = () => {
-    return (
-        <div>
-            <CardList />
-        </div>
-    )
-}
+const Product = ({ query }) => {
 
-export default Product
+	return (
+		<div>
+			<CardList query={query}/>
+		</div>
+	);
+};
+
+Product.propTypes = {
+	query: PropTypes.string.isRequired,
+};
+
+export default Product;

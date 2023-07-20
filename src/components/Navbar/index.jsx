@@ -12,13 +12,17 @@ import {
 	Search,
 	Nav,
 } from "./styled.js";
+import PropTypes from "prop-types"
 
-const Navbar = () => {
+const Navbar = ({setQuery}) => {
 	const [isShrinkHeader, setIsShrinkHeader] = useState(true);
+	
 
 	const toggleShrinkHeader = () => {
 		setIsShrinkHeader(state => !state);
 	};
+
+	
 
 	return (
 		<HeaderWrapper height={`${isShrinkHeader}`}>
@@ -33,7 +37,7 @@ const Navbar = () => {
 						<IconWrapper>
 							<AiOutlineSearch size={23}/>
 						</IconWrapper>
-						<Search type="text" placeholder="Search..." />
+						<Search type="text" placeholder="Search..." onChange={e => setQuery(e.target.value)}/>
 					</SearchBox>
 					<BurgerWrapper>
 						{isShrinkHeader ? (
@@ -47,5 +51,9 @@ const Navbar = () => {
 		</HeaderWrapper>
 	);
 };
+
+Navbar.propTypes ={
+	setQuery: PropTypes.func.isRequired
+}
 
 export default Navbar;
