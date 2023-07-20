@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 export const HeaderWrapper = styled.header`
 	position: fixed;
 	top: 0;
-	background: transparent !important;
+	background: rgba(255, 255, 255, 0.45);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4.7px);
+	-webkit-backdrop-filter: blur(4.7px);
 	width: 100%;
 	white-space: nowrap;
 	height: 70px;
@@ -12,7 +15,7 @@ export const HeaderWrapper = styled.header`
 	z-index: 999;
 
 	@media (max-width: 992px) {
-		height: ${props => (props?.height === "true" ? "60px" : "195px")};
+		height: ${props => (props?.height === "true" ? "60px" : "220px")};
 	}
 `;
 
@@ -41,8 +44,6 @@ export const Wrapper = styled.div`
 	height: 100%;
 	position: relative;
 	justify-content: space-between;
-	padding: 5px;
-	border-bottom: 1px solid black;
 
 	@media (max-width: 992px) {
 		align-items: start;
@@ -55,7 +56,7 @@ export const Logo = styled.h2`
 	display: block;
 	width: 100px;
 	font-family: "Acme", sans-serif;
-	color: #2c365a;
+	color: #3636B2;
 	letter-spacing: 4px;
 	font-size: 2em;
 	font-weight: 800;
@@ -111,7 +112,8 @@ export const SearchBox = styled.div`
 	padding: 5px;
 	width: 250px;
 	background: none;
-	border: 1px solid #91a0a4;
+	/* border: 1px solid #91a0a4; */
+	background-color: #91a0a4;
 	border-radius: 16px;
 	margin-left: auto;
 
@@ -126,7 +128,7 @@ export const IconWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-`
+`;
 
 export const Search = styled.input`
 	outline: none;
@@ -136,6 +138,7 @@ export const Search = styled.input`
 	font-size: 14px;
 	width: calc(100% - 40px);
 	background-color: transparent !important;
+	color: black;
 `;
 
 export const BurgerWrapper = styled.div`
