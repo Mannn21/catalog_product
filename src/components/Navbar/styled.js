@@ -52,7 +52,7 @@ export const Wrapper = styled.div`
 	}
 `;
 
-export const Logo = styled.h2`
+export const Logo = styled(Link)`
 	display: block;
 	width: 100px;
 	font-family: "Acme", sans-serif;
@@ -61,6 +61,7 @@ export const Logo = styled.h2`
 	font-size: 2em;
 	font-weight: 800;
 	cursor: pointer;
+	text-decoration: none;
 
 	@media (max-width: 992px) {
 		margin-top: 12px;

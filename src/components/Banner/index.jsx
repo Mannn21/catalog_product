@@ -19,7 +19,7 @@ const Banner = () => {
 						Menyediakan berbagai produk, mulai dari fashion hingga alat
 						elektronik dari berbagai merk terkenal dengan harga yang terjangkau
 					</Text>
-					<Button>Lihat Produk</Button>
+					<Button to="/product">Lihat Produk</Button>
 				</ContentWrapper>
 				<ContentWrapper>
 					<ImageWrapper>

@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
 	width: 240px;
 	height: 300px;
 	box-sizing: border-box;
-    cursor: pointer;
+	cursor: pointer;
+	text-decoration: none;
 `;
 
 export const Wrapper = styled.div`
@@ -33,10 +35,23 @@ export const HeaderWrapper = styled.div`
 
 export const Title = styled.h2`
 	font-size: 16px;
+	text-decoration: none;
+	color: black;
+	font-family: "Nunito", sans-serif;
 `;
 
 export const Category = styled.span`
 	font-size: 14px;
+	text-decoration: none;
+	font-family: "Nunito", sans-serif;
+	color: black;
+`;
+
+export const Price = styled.h3`
+	font-size: 16px;
+	text-decoration: none;
+	color: black;
+	font-family: "Nunito", sans-serif;
 `;
 
 export const ImageWrapper = styled.div`

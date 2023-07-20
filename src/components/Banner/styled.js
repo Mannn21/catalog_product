@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom"
 
 export const Container = styled.div`
 	width: 100%;
@@ -42,12 +43,13 @@ export const Text = styled.span`
     color: #555;
 `
 
-export const Button = styled.button`
+export const Button = styled(Link)`
     font-size: 18px;
     padding: 4px 18px;
     letter-spacing: 1.1px;
     font-family: "Nunito", sans-serif;
     color: #000;
+    text-decoration: none;
     background-color: #9B9BD9;
     border: none;
     outline: none;

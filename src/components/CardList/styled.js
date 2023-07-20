@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContentContainer = styled.div`
     width: 100%;
     height: auto;
@@ -19,7 +18,6 @@ export const ContentWrapper = styled.div`
     @media only screen and (min-width: 481px) and (max-width: 768px){
         padding: 30px 5px;
     }
-
 `
 
 export const Content = styled.div`
@@ -29,4 +27,9 @@ export const Content = styled.div`
     gap: 50px;
     justify-content: center;
     align-items: center;
+`
+
+export const CardWrapper = styled.div`
+    width: 240px;
+	height: 300px;
 `

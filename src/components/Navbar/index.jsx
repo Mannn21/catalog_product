@@ -24,7 +24,7 @@ const Navbar = () => {
 		<HeaderWrapper height={`${isShrinkHeader}`}>
 			<Container>
 				<Wrapper>
-					<Logo>Storey</Logo>
+					<Logo to="/">Storey</Logo>
 					<Menu>
 						<Nav to="/product">Product</Nav>
 						<Nav to="/contact">Hubungi Kami</Nav>

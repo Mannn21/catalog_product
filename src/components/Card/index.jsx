@@ -1,5 +1,3 @@
-// import { useState, useEffect } from "react";
-// import { getData } from "../../utils/getDatas.js";
 import {
 	Container,
 	Wrapper,
@@ -7,16 +5,16 @@ import {
 	ImageWrapper,
 	Image,
 	FooterWrapper,
-    Title,
-    Category
+	Title,
+	Category,
+	Price,
 } from "./styled.js";
 import PropTypes from "prop-types";
+import Star from "../Star"
 
-const Card = ({data}) => {
-
-
+const Card = ({ data }) => {
 	return (
-		<Container>
+		<Container to={`/product/${data.id}`}>
 			<Wrapper>
 				<HeaderWrapper>
 					<Title>{data.title.slice(0, 9)}</Title>
@@ -26,8 +24,8 @@ const Card = ({data}) => {
 					<Image src={data.image} alt="" />
 				</ImageWrapper>
 				<FooterWrapper>
-					<h3>$ {data.price}</h3>
-					<span>{data.rating.rate}</span>
+					<Price>$ {data.price}</Price>
+					<Star stars={data.rating.rate}/>
 				</FooterWrapper>
 			</Wrapper>
 		</Container>
@@ -36,16 +34,16 @@ const Card = ({data}) => {
 
 Card.propTypes = {
 	data: PropTypes.shape({
+		id: PropTypes.number.isRequired,
 		title: PropTypes.string.isRequired,
 		category: PropTypes.string.isRequired,
 		image: PropTypes.string.isRequired,
 		price: PropTypes.number.isRequired,
 		rating: PropTypes.shape({
-            rate: PropTypes.number.isRequired,
-            count: PropTypes.number.isRequired,
-        }).isRequired
+			rate: PropTypes.number.isRequired,
+			count: PropTypes.number.isRequired,
+		}).isRequired,
 	}).isRequired,
 };
-
 
 export default Card;
