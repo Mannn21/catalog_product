@@ -11,7 +11,7 @@ import {
 	MessageBox,
 	TextArea,
 	HeaderMessage,
-    DropdownHeader,
+	DropdownHeader,
 	DropdownBox,
 	DropdownContainer,
 	DropdownValueBox,
@@ -19,11 +19,20 @@ import {
 	Dropdown,
 	DropdownItem,
 	Radio,
+	Title,
+	SectionRight,
+	Button
 } from "./styled.js";
+import { AiOutlineDown, AiOutlineUp, AiOutlineSend } from "react-icons/ai";
 
 const Email = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [data, setData] = useState("");
+
+	const handleDropdownItemClick = item => {
+		setData(item);
+		setIsOpen(false);
+	};
 
 	const form = useRef();
 
@@ -52,62 +61,81 @@ const Email = () => {
 				<FormBox>
 					<Detail>
 						<InputBox>
-							<label>Nama</label>
-							<Input type="text" name="from_name" />
+							<Title>Nama :</Title>
+							<Input type="text" name="from_name" autoComplete="off" placeholder="Masukkan Nama Anda..."/>
 						</InputBox>
 						<InputBox>
-							<label>Email Anda</label>
-							<Input type="email" name="from_email" />
+							<Title>Email :</Title>
+							<Input type="email" name="from_email" autoComplete="off" placeholder="Masukkan Email Anda..." />
 						</InputBox>
 						<DropdownBox>
 							<DropdownHeader>Perihal : </DropdownHeader>
-							<DropdownContainer onClick={() => setIsOpen(!isOpen)} $isOpen={isOpen}>
+							<DropdownContainer
+								onClick={() => setIsOpen(!isOpen)}
+								$isOpen={isOpen}>
 								<DropdownValueBox>
-									{/* <DropdownValue type="text" name="subject" value={data}/> */}
-                                    <DropdownValue>{data}</DropdownValue>
+									<DropdownValue
+										type="text"
+										name="subject"
+										value={data}
+										readOnly
+										placeholder="Pilih Opsi Perihal Anda...."
+									/>
+									{isOpen === false ? <AiOutlineDown /> : <AiOutlineUp />}
 								</DropdownValueBox>
 								<Dropdown>
-									<DropdownItem>
+									<DropdownItem
+										onClick={() => handleDropdownItemClick("Pertanyaan")}>
 										<Radio
 											type="radio"
-											value="Question"
-                                            id="Question"
+											value="Pertanyaan"
+											id="Pertanyaan"
+											name="subject"
 											onClick={e => setData(e.target.value)}
 										/>
-										<label htmlFor="Question">Pertanyaan</label>
+										<label htmlFor="Pertanyaan">Pertanyaan</label>
 									</DropdownItem>
-									<DropdownItem>
+									<DropdownItem
+										onClick={() => handleDropdownItemClick("Permintaan")}>
 										<Radio
 											type="radio"
-											value="Request"
-                                            id="Request"
+											value="Permintaan"
+											id="Permintaan"
+											name="subject"
 											onClick={e => setData(e.target.value)}
 										/>
-										<label htmlFor="Request">Permintaan</label>
+										<label htmlFor="Permintaan">Permintaan</label>
 									</DropdownItem>
-									<DropdownItem>
+									<DropdownItem
+										onClick={() => handleDropdownItemClick("Kritik dan Saran")}>
 										<Radio
 											type="radio"
-											value="Suggestion"
-                                            id="Suggestion"
+											value="Kritik dan Saran"
+											id="Kritik dan Saran"
+											name="subject"
 											onClick={e => setData(e.target.value)}
 										/>
-										<label htmlFor="Suggestion">Kritik dan Saran</label>
+										<label htmlFor="Kritik dan Saran">Kritik dan Saran</label>
 									</DropdownItem>
 								</Dropdown>
 							</DropdownContainer>
 						</DropdownBox>
 					</Detail>
-					<MessageBox>
-						<HeaderMessage>
-							<label>Message</label>
-						</HeaderMessage>
-						<TextArea name="message" />
-					</MessageBox>
+					<SectionRight>
+						<MessageBox>
+							<HeaderMessage>
+								<Title>Message</Title>
+							</HeaderMessage>
+							<TextArea name="message" placeholder="Masukkan Pesan Anda..." />
+						</MessageBox>
+						<ButtonWrapper>
+							<Button type="submit" >
+								Kirim
+								<AiOutlineSend />
+							</Button>
+						</ButtonWrapper>
+					</SectionRight>
 				</FormBox>
-				<ButtonWrapper>
-					<input type="submit" value="Send" />
-				</ButtonWrapper>
 			</Form>
 		</Container>
 	);
