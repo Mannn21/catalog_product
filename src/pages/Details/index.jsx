@@ -42,8 +42,6 @@ const Details = () => {
 		setIdProduct(newProduct);
 	};
 
-	console.log(product);
-
 	return (
 		<Container>
 			{Object.keys(product).length === 0 ? (
