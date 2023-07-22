@@ -1,20 +1,19 @@
 import Email from "../../components/Email"
+import { Container, HeaderWrapper, EmailWrapper, Wrapper, Span } from "./styled.js"
 
 const Contact = () => {
     return (
-        <div>
-            <div>
-                <div>
-                    <h3>
-                        Hubungi Kami!
-                    </h3>
-                    <span>Punya pertanyaan, permintaan ataupun kritik dan saran? Kami senang mendengarnya!</span>
-                </div>
-                <div>
+        <Container>
+            <Wrapper>
+                <HeaderWrapper>
+                    <Span>Hubungi Kami Kapanpun,</Span>
+                    <Span>Kami senang mendengarnya!</Span>
+                </HeaderWrapper>
+                <EmailWrapper>
                     <Email />
-                </div>
-            </div>
-        </div>
+                </EmailWrapper>
+            </Wrapper>
+        </Container>
     )
 }
 
