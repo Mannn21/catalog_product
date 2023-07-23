@@ -14,7 +14,7 @@ const Contact = () => {
 			<Wrapper>
 				<HeaderWrapper>
 					<Span>Hubungi Kami Kapanpun,</Span>
-					<Span>Kami senang mendengarnya!</Span>
+					<Span>Kami selalu senang mendengarnya!</Span>
 				</HeaderWrapper>
 				<EmailWrapper>
 					<Email />
