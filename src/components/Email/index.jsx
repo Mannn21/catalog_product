@@ -34,8 +34,6 @@ const Email = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 
-	console.log({name, email, data, message})
-
 	const handleDropdownItemClick = item => {
 		setData(item);
 		setIsOpen(false);
