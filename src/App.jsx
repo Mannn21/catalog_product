@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Details from "./pages/Details";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
 
 import { Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ const App = () => {
 				<Route path="/product" element={<Product query={query}/>} />
 				<Route path="/product/:id" element={<Details />} />
 			</Routes>
+			<Footer />
 		</div>
 	);
 };

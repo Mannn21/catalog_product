@@ -188,7 +188,7 @@ export const HeaderMessage = styled.div`
 `;
 
 export const TextArea = styled.textarea`
-	width: 80%;
+	width: 90%;
 	height: calc(100% - 50px);
 	resize: none;
 	box-sizing: border-box;
