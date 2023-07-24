@@ -15,7 +15,7 @@ export const HeaderWrapper = styled.header`
 	z-index: 999;
 
 	@media (max-width: 992px) {
-		height: ${props => (props?.height === "true" ? "60px" : "220px")};
+		height: ${props => (props?.height === "true" ? "60px" : "230px")};
 	}
 `;
 
@@ -66,6 +66,11 @@ export const Logo = styled(Link)`
 	@media (max-width: 992px) {
 		margin-top: 12px;
 	}
+	
+	@media (max-width: 768px) {
+		font-size: 1.6em;
+		margin-top: 22px;
+	}
 `;
 
 export const Menu = styled.div`
@@ -82,8 +87,8 @@ export const Menu = styled.div`
 		margin: auto;
 		text-align: center;
 		flex-direction: column;
-		margin-top: -28px;
-		padding-bottom: 20px;
+		/* margin-top: -5px; */
+		padding-bottom: 5px;
 	}
 `;
 

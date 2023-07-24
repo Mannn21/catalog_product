@@ -62,10 +62,11 @@ export const Button = styled(Link)`
 `
 
 export const ImageWrapper = styled.div`
-	width: 340px;
-	height: 420px;
+	width: 270px;
+	height: 340px;
 	overflow: hidden;
 	border-radius: 50% 50% 0 0;
+    box-sizing: border-box;
 	box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
 	-webkit-box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
 	-moz-box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
