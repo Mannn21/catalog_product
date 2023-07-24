@@ -1,5 +1,5 @@
 import {
-	Container,
+	// Container,
 	Wrapper,
 	HeaderWrapper,
 	ImageWrapper,
@@ -14,8 +14,8 @@ import Star from "../Star"
 
 const Card = ({ data }) => {
 	return (
-		<Container to={`/product/${data.id}`}>
-			<Wrapper>
+		// <Container to={`/product/${data.id}`}>
+			<Wrapper to={`/product/${data.id}`}>
 				<HeaderWrapper>
 					<Title>{data.title.slice(0, 9)}</Title>
 					<Category>{data.category}</Category>
@@ -28,7 +28,7 @@ const Card = ({ data }) => {
 					<Star stars={data.rating.rate}/>
 				</FooterWrapper>
 			</Wrapper>
-		</Container>
+		// </Container>
 	);
 };
 

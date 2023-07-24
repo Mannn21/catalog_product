@@ -1,18 +1,23 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Container = styled(Link)`
-	width: 240px;
-	height: 300px;
-	box-sizing: border-box;
-	cursor: pointer;
-	text-decoration: none;
-`;
+// export const Container = styled(Link)`
+// 	width: 240px;
+// 	height: 300px;
+// 	box-sizing: border-box;
+// 	cursor: pointer;
+// 	text-decoration: none;
+
+// 	@media (max-width: 910px) {
+//         width: 100%;
+// 		background-color: #777;
+//     }
+// `;
 
 export const Wrapper = styled.div`
 	border-radius: 10px;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	padding: 2px;
 	display: flex;
 	gap: 5px;
@@ -20,6 +25,11 @@ export const Wrapper = styled.div`
 	box-shadow: 3px 3px 6px 0px rgba(128, 128, 128, 0.75);
 	-webkit-box-shadow: 3px 3px 6px 0px rgba(128, 128, 128, 0.75);
 	-moz-box-shadow: 3px 3px 6px 0px rgba(128, 128, 128, 0.75);
+	border: 1px solid blue;
+
+	/* @media (max-width: 585px) {
+        flex-direction: row;
+    } */
 `;
 
 export const HeaderWrapper = styled.div`

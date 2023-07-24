@@ -5,6 +5,15 @@ export const Container = styled.div`
 	width: 100%;
 	height: 500px;
 	box-sizing: border-box;
+
+    @media (max-width: 992px) {
+        height: 700px;
+        border: 1px solid red;
+    }
+
+    @media (max-width: 375px) {
+        height: 800px;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -16,6 +25,13 @@ export const Wrapper = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
+
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 20px;
+    }
 `;
 
 export const ContentWrapper = styled.div`
@@ -28,12 +44,40 @@ export const ContentWrapper = styled.div`
     padding: ${props => (props.$text === true ? "20px 70px" : 0)};
     gap: 10px;
     box-sizing: border-box;
+
+    @media (max-width: 992px) {
+        width: 100%;
+        height: 50%;
+    }
+
+    @media (max-width: 612px) {
+        border: 1px solid blue;
+        padding: ${props => (props.$text === true ? "20px 30px" : 0)};
+    }
+
+    @media (max-width: 375px) {
+        padding: ${props => (props.$text === true ? "10px 20px" : 0)};
+    }
 `
 
 export const Header = styled.h1`
     font-size: 40px;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1.1px;
+
+    @media (max-width: 992px) {
+        text-align: center;
+    }
+
+    @media (max-width: 612px) {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 28px;
+        text-align: center;
+    }
 `
 
 export const Text = styled.span`
@@ -41,6 +85,15 @@ export const Text = styled.span`
     letter-spacing: 1.1px;
     font-family: "Nunito", sans-serif;
     color: #555;
+
+    @media (max-width: 992px) {
+        text-align: center;
+    }
+
+    @media (max-width: 612px) {
+        font-size: 14px;
+        text-align: center;
+    }
 `
 
 export const Button = styled(Link)`
@@ -70,9 +123,18 @@ export const ImageWrapper = styled.div`
 	box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
 	-webkit-box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
 	-moz-box-shadow: 5px 5px 9px 4px rgba(207, 198, 198, 0.75);
+
+    @media (max-width: 992px) {
+        height: 96%;
+        width: 280px;
+    }
 `;
 
 export const Image = styled.img`
 	margin-left: -120px;
 	height: 100%;
+
+    @media (max-width: 992px) {
+        margin-left: -100px;
+    }
 `;

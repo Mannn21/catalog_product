@@ -6,6 +6,14 @@ export const Container = styled.div`
 	box-sizing: border-box;
 	padding: 5px 100px;
     margin-top: 20px;
+
+	@media (max-width: 992px) {
+		padding: 5px 60px;
+	}
+
+	@media (max-width: 765px) {
+		padding: 5px 10px;
+	}
 `;
 
 export const Wrapper = styled.div`
@@ -33,4 +41,8 @@ export const CardText = styled.span`
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     text-align: center;
+
+	@media (max-width: 765px) {
+		font-size: 14px;
+	}
 `
